@@ -1,0 +1,54 @@
+# ===============================
+# Ruff Configuration
+# ===============================
+
+# Target Python version
+target-version = "py310"
+
+# Directories to lint
+src = ["src", "tests"]
+
+# Enable linting rules
+select = [
+  "E",  # pycodestyle errors
+  "F",  # pyflakes
+  "I",  # isort (import sorting)
+  "UP", # pyupgrade
+  "B",  # flake8-bugbear
+  "A",  # flake8-builtins
+  "PL", # pylint-style checks
+]
+
+# Ignore specific rules
+ignore = [
+  "E501",  # line too long (handled by formatter)
+  "PLR2004",  # magic value comparison
+  "B008",  # function call in default argument
+]
+
+# Exclude these paths
+exclude = [
+  ".venv",
+  "build",
+  "dist",
+  "__pycache__",
+  "docs",
+]
+
+# Maximum line length
+line-length = 100
+
+# Fix imports automatically
+[isort]
+combine-as-imports = true
+known-first-party = ["ccutils"]
+
+# Enable automatic fixing with `ruff check --fix`
+fix = true
+
+# Formatter options (if using `ruff format`)
+[format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+skip-magic-trailing-comma = false

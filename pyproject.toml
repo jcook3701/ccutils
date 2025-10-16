@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccutils"
+version = "0.1.0"
+description = "Cookiecutter utilities for jcook3701's cookiecuter templates."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Jared Cook", email = "" }
+]
+keywords = ["python3"]
+classifiers = ["Development Status :: 3 - Alpha", "Intended Audience :: Developers", "Intended Audience :: Education", "Programming Language :: Python :: 3", "Operating System :: POSIX :: Linux"]
+requires-python = "\u003e=3.9"
+dependencies = [
+  "mypy==1.9",
+]
+
+# Optional dependencies (like devDependencies in JS)
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.6.0",
+  "pytest>=8.0",
+  "sphinx>=7.0",
+  "sphinx-markdown-builder>=0.5.3",
+  "sphinx-autodoc-typehints>=1.24",
+  "myst-parser>=0.18"
+]
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Ruff (linter, formatter, import sorter)
+[tool.ruff]
+line-length = 88
+src = ["src"]
+target-version = "py39"
+select = ["E", "F", "I", "N", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+
+# Mypy (type checker)
+[tool.mypy]
+python_version = "3.9"
+mypy_path = "src"
+strict = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+# Pytest configuration
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-v", "--maxfail=1", "--disable-warnings"]
+
+# Optional entry point (lets you run with `python -m ccutils`)
+[project.scripts]
+ccutils = "ccutils.__main__:main"
