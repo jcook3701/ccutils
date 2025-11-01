@@ -19,18 +19,18 @@ JEKYLL_DIR = docs/jekyll
 SPHINX_BUILD_DIR = $(SPHINX_DIR)/_build/html
 JEKYLL_OUTPUT_DIR = $(JEKYLL_DIR)/sphinx
 # --------------------------------------------------
-# Python 🐍 / Virtual Environment
+# 🐍 Python / Virtual Environment
 # --------------------------------------------------
 PYTHON := python3.11
 VENV_DIR := .venv
 # --------------------------------------------------
-# Python 🐍 Dependencies
+# 🐍 Python Dependencies
 # --------------------------------------------------
 DEPS := .
 DEV_DEPS := .[dev]
 DEV_DOCS := .[docs]
 # --------------------------------------------------
-# ⚙️ Python Commands (venv, activate, pip)
+# 🐍️ Python Commands (venv, activate, pip)
 # --------------------------------------------------
 CREATE_VENV := $(PYTHON) -m venv $(VENV_DIR)
 ACTIVATE = source $(VENV_DIR)/bin/activate
@@ -56,7 +56,7 @@ JEKYLL_BUILD := bundle exec jekyll build
 JEKYLL_CLEAN := bundle exec jekyll clean
 JEKYLL_SERVE := bundle exec jekyll serve
 # --------------------------------------------------
-# ccutils command
+# 🏃‍♂️ ccutils command
 # --------------------------------------------------
 CCUTILS := $(ACTIVATE) && $(PYTHON) -m ccutils.ccutils
 
@@ -114,7 +114,7 @@ typecheck:
 # --------------------------------------------------
 test:
 	@echo "🧪 Running tests with pytest..."
-	$(PYTEST) -v --maxfail=1 --disable-warnings $(TEST_DIR)
+	PYTHONPATH=$(PWD)/src $(PYTEST) -v --maxfail=1 --disable-warnings $(TEST_DIR)
 
 # --------------------------------------------------
 # Documentation (Sphinx + Jekyll)
