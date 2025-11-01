@@ -1,20 +1,21 @@
-# coding: utf-8
 """ccutils Package
 
 © All rights reserved. Jared Cook
 
-See the LICENSE.TXT file for more details.
+See the LICENSE file for more details.
 
 Author: Jared Cook
 Description: 
 """
 
 import json
+
 from cookiecutter.main import cookiecutter
+
 
 def run_template(template_repo, config_path, checkout=None, output_dir="."):
     """Run a cookiecutter template with a pre-supplied JSON config."""
-    with open(config_path, "r") as f:
+    with open(config_path) as f:
         extra_context = json.load(f)
 
     cookiecutter(

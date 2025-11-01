@@ -1,9 +1,8 @@
-# coding: utf-8
 """ccutils Package
 
 © All rights reserved. Jared Cook
 
-See the LICENSE.TXT file for more details.
+See the LICENSE file for more details.
 
 Author: Jared Cook
 Description: 
@@ -13,9 +12,10 @@ import json
 import re
 import tempfile
 from pathlib import Path
-from git import Repo
-from cookiecutter.main import cookiecutter
+
 import typer
+from cookiecutter.main import cookiecutter
+from git import Repo
 
 app = typer.Typer(help="CCUtils: Cookiecutter automation utilities")
 
@@ -40,7 +40,7 @@ def extract(
             typer.echo(f"Error: No cookiecutter.json found in {repo}", err=True)
             raise typer.Exit(code=1)
 
-        with open(config_path, "r") as f:
+        with open(config_path) as f:
             data = json.load(f)
 
         cleaned_data = {
@@ -68,7 +68,7 @@ def run(
     """
     Run a cookiecutter template using a pre-supplied JSON config.
     """
-    with open(config, "r") as f:
+    with open(config) as f:
         extra_context = json.load(f)
 
     cookiecutter(

@@ -1,9 +1,8 @@
-# coding: utf-8
 """ccutils Package
 
 © All rights reserved. Jared Cook
 
-See the LICENSE.TXT file for more details.
+See the LICENSE file for more details.
 
 Author: Jared Cook
 Description:
@@ -12,9 +11,10 @@ Description:
 import json
 import re
 import tempfile
-import shutil
 from pathlib import Path
+
 from git import Repo  # Requires GitPython: pip install GitPython
+
 
 def extract_cookiecutter_config_from_repo(repo_url, branch="main", output_file="clean_cookiecutter.json"):
     """
@@ -28,7 +28,7 @@ def extract_cookiecutter_config_from_repo(repo_url, branch="main", output_file="
         if not config_path.exists():
             raise FileNotFoundError(f"No cookiecutter.json found in {repo_url}")
 
-        with open(config_path, "r") as f:
+        with open(config_path) as f:
             data = json.load(f)
 
         # Remove Jinja placeholders

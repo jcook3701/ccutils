@@ -1,4 +1,3 @@
-# coding: utf-8
 """ccutils Package
 
 © All rights reserved. Jared Cook
