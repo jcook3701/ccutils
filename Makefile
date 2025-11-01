@@ -4,12 +4,12 @@
 # =========================================
 
 # --------------------------------------------------
-# Environment Settings
+# ⚙️ Environment Settings
 # --------------------------------------------------
 SHELL := /bin/bash
 .SHELLFLAGS := -O globstar -c
 # --------------------------------------------------
-# Build Directories
+# 📁 Build Directories
 # --------------------------------------------------
 SRC_DIR := src
 TEST_DIR := tests
@@ -19,52 +19,53 @@ JEKYLL_DIR = docs/jekyll
 SPHINX_BUILD_DIR = $(SPHINX_DIR)/_build/html
 JEKYLL_OUTPUT_DIR = $(JEKYLL_DIR)/sphinx
 # --------------------------------------------------
-# Python / Virtual Environment
+# 🐍 Python / Virtual Environment
 # --------------------------------------------------
 PYTHON := python3.11
 VENV_DIR := .venv
 # --------------------------------------------------
-# Python Dependencies
+# 🐍 Python Dependencies
 # --------------------------------------------------
 DEPS := .
 DEV_DEPS := .[dev]
 DEV_DOCS := .[docs]
 # --------------------------------------------------
-# Python Commands (venv, activate, pip)
+# 🐍️ Python Commands (venv, activate, pip)
 # --------------------------------------------------
 CREATE_VENV := $(PYTHON) -m venv $(VENV_DIR)
 ACTIVATE = source $(VENV_DIR)/bin/activate
 PIP := $(ACTIVATE) && $(PYTHON) -m pip
 # --------------------------------------------------
-# Typing (mypy)
+# 🧠 Typing (mypy)
 # --------------------------------------------------
 MYPY := $(ACTIVATE) && $(PYTHON) -m mypy
 # --------------------------------------------------
-# Linting (ruff, yaml)
+# 🔍 Linting (ruff, yaml)
 # --------------------------------------------------
 RUFF := $(ACTIVATE) && $(PYTHON) -m ruff
 YAMLLINT := $(ACTIVATE) && $(PYTHON) -m yamllint
 # --------------------------------------------------
-# Testing (pytest)
+# 🧪 Testing (pytest)
 # --------------------------------------------------
 PYTEST := $(ACTIVATE) && $(PYTHON) -m pytest
 # --------------------------------------------------
-# Documentation (Sphinx + Jekyll)
+# 📘 Documentation (Sphinx + Jekyll)
 # --------------------------------------------------
 SPHINX := $(ACTIVATE) && $(PYTHON) -m sphinx -b markdown
 JEKYLL_BUILD := bundle exec jekyll build
 JEKYLL_CLEAN := bundle exec jekyll clean
 JEKYLL_SERVE := bundle exec jekyll serve
 # --------------------------------------------------
-# ccutils command
+# 🏃‍♂️ ccutils command
 # --------------------------------------------------
 CCUTILS := $(ACTIVATE) && $(PYTHON) -m ccutils.ccutils
 
 # -------------------------------------------------------------------
 .PHONY: all venv install ruff-lint-check ruff-lint-fix yaml-lint-check \
 	lint-check typecheck test docs jekyll-serve clean help
-
+# -------------------------------------------------------------------
 # Default: run install, lint, typecheck, tests, and docs
+# -------------------------------------------------------------------
 all: install lint-check typecheck test docs
 
 # --------------------------------------------------
@@ -86,13 +87,14 @@ install: venv
 # --------------------------------------------------
 # Linting (ruff, yaml, jinja2)
 # --------------------------------------------------
-ruff-lint-check: install
+ruff-lint-check:
 	@echo "🔍 Running ruff linting..."
 	$(RUFF) check $(SRC_DIR) $(TEST_DIR)
 
-ruff-lint-fix: install
+ruff-lint-fix:
 	@echo "🎨 Running ruff lint fixes..."
-	$(RUFF) check --fix --show-files $(SRC_DIR) $(TEST_DIR)
+	$(RUFF) check --show-files $(SRC_DIR) $(TEST_DIR)
+	$(RUFF) check --fix $(SRC_DIR) $(TEST_DIR)
 
 yaml-lint-check:
 	@echo "🔍 Running yamllint..."
@@ -105,20 +107,20 @@ lint-check: ruff-lint-check yaml-lint-check
 # --------------------------------------------------
 typecheck:
 	@echo "🧠 Checking types (MyPy)..."
-	$(MYPY) $(SRC_DIR)
+	$(MYPY) $(SRC_DIR) $(TEST_DIR)
 
 # --------------------------------------------------
 # Testing (pytest)
 # --------------------------------------------------
 test:
 	@echo "🧪 Running tests with pytest..."
-	$(PYTEST) -v --maxfail=1 --disable-warnings $(TEST_DIR)
+	PYTHONPATH=$(PWD)/src $(PYTEST) -v --maxfail=1 --disable-warnings $(TEST_DIR)
 
 # --------------------------------------------------
 # Documentation (Sphinx + Jekyll)
 # --------------------------------------------------
 docs:
-	@echo "🔨 Building Sphinx documentation as Markdown..."
+	@echo "🔨 Building Sphinx documentation 📘 as Markdown..."
 	$(SPHINX) $(SPHINX_DIR) $(JEKYLL_OUTPUT_DIR)
 	@echo "✅ Sphinx Markdown build complete!"
 	@echo "🔨 Building Jekyll site..."
@@ -129,8 +131,11 @@ jekyll-serve: docs
 	@echo "🚀 Starting Jekyll development server..."
 	cd $(JEKYLL_DIR) && $(JEKYLL_SERVE)
 
+# --------------------------------------------------
+# Run ccutils program
+# --------------------------------------------------
 run:
-	@echo "⚙️ running ccurtils..."
+	@echo "🏃‍♂️ running ccurtils..."
 	$(CCUTILS)
 
 # --------------------------------------------------

@@ -1,5 +1,6 @@
+# ruff lint
 ---
-name: Cookiecutter ruff Lint
+name: Cookiecutter template ruff lint
 
 on:
   push:
@@ -8,7 +9,7 @@ on:
     branches: [master, develop]
 
 jobs:
-  lint:
+  ruff-lint:
     runs-on: ubuntu-latest
 
     steps:

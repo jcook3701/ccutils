@@ -1,9 +1,8 @@
-# coding: utf-8
 """ccutils Package
 
 © All rights reserved. Jared Cook
 
-See the LICENSE.TXT file for more details.
+See the LICENSE file for more details.
 
 Author: Jared Cook
 Description: Cookiecutter utilities for automating project templates.
@@ -13,5 +12,9 @@ __version__ = "0.1.0"
 __author__ = "Jared Cook"
 __license__ = "MIT"
 
-# Optional: expose high-level functions
-from .cli import app as cli_app
+from .cli import app
+from .docs import add_docs
+from .extract import extract_cookiecutter_config_from_repo
+from .run import run_template
+
+__all__ = ["app", "add_docs", "extract_cookiecutter_config_from_repo", "run_template"]

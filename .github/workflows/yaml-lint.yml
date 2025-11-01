@@ -1,5 +1,6 @@
+# yaml lint
 ---
-name: Template YAML Lint
+name: Cookiecutter template YAML lint
 
 on:
   push:
@@ -8,7 +9,7 @@ on:
     branches: [master, develop]
 
 jobs:
-  lint:
+  yaml-lint:
     runs-on: ubuntu-latest
 
     steps:
