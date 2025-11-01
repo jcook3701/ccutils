@@ -21,7 +21,7 @@ def test_run_template_calls_cookiecutter(tmp_path: Path) -> None:
     config_data: dict[str, str] = {"project_name": "MyProject"}
     config_path.write_text(json.dumps(config_data))
 
-    with patch("ccutils.run_template.cookiecutter") as mock_cc:
+    with patch("ccutils.run.cookiecutter") as mock_cc:
         run_template(template_repo, str(config_path))
         mock_cc.assert_called_once()
         _, kwargs = mock_cc.call_args
