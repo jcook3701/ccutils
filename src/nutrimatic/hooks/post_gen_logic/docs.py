@@ -36,6 +36,7 @@ def generate_docs_templates(context: dict[str, Any]) -> None:
 
     base_ctx = {
         "project_name": project_name,
+        "project_slug": context.get("project_slug"),
         "author": context.get("author"),
         "version": context.get("version"),
         "description": context.get("description"),
