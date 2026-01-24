@@ -11,6 +11,7 @@
 ### 🐛 Fixed
 
 - *(docs)* Pass cookiecutter.project_slug between main generation project and documentation templates.
+- *(docs)* Update transfer of data to sub-templates.
 ## [0.1.11] - 2026-01-06
 
 ### ⚙️  Miscellaneous
