@@ -8,10 +8,10 @@ Author: Jared Cook
 Description: Base model for project models.
 """
 
-from deprecated import deprecated
 from dataclasses import asdict, dataclass, fields, is_dataclass
 from typing import Any, TypeVar, cast
 
+from deprecated import deprecated
 
 T = TypeVar("T", bound="CcutilsBaseModel")
 
