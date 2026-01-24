@@ -6,8 +6,33 @@
 
 ### ⚙️  Miscellaneous
 
+- *(version)* Version bump to 0.1.12!
+
+### 🐛 Fixed
+
+- *(docs)* Pass cookiecutter.project_slug between main generation project and documentation templates.
+- *(docs)* Update transfer of data to sub-templates.
+
+### 🚀 Added
+
+- *(upgrade)* Getting started on setup to begin upgrade from python3-cookiecutter template.
+## [0.1.11] - 2026-01-06
+
+### ⚙️  Miscellaneous
+
 - *(version)* Version bump to 0.1.10!
 - *(version)* Bump version to 0.1.11!
+- Merge pull request #21 from jcook3701/feat-009
+
+Feat 009
+- Merge pull request #22 from jcook3701/develop
+
+Develop
+- *(changelogs)* Changelog update.
+
+### 🐛 Fixed
+
+- *(hooks)* Finally got cookiecutter sub-template recursion fixed!
 ## [0.1.10] - 2025-12-27
 
 ### ⚙️  Miscellaneous
