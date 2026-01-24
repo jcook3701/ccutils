@@ -6,7 +6,7 @@
 <h1 id="nutri-matic">Nutri-Matic</h1>
 
 <p><strong>Author:</strong> Jared Cook<br />
-<strong>Version:</strong> 0.1.11</p>
+<strong>Version:</strong> 0.1.12</p>
 
 <h2 id="overview">Overview</h2>
 
