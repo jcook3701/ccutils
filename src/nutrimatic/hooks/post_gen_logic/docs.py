@@ -37,9 +37,20 @@ def generate_docs_templates(context: dict[str, Any]) -> None:
     base_ctx = {
         "project_name": project_name,
         "project_slug": context.get("project_slug"),
+        "company": context.get("company"),
         "author": context.get("author"),
+        "email": context.get("email"),
         "version": context.get("version"),
+        "timezone": context.get("timezone"),
+        "license": context.get("license"),
+        "contribution_model": context.get("contribution_model"),
+        "publication_year": context.get("publication_year"),
+        "current_year": context.get("current_year"),
+        "__year_range": context.get("__year_range"),
+        "copyright": context.get("copyright"),
         "description": context.get("description"),
+        "github_org": context.get("github_org"),
+        "template_type": context.get("template_type"),
         "_is_sub_template": True,
     }
 
@@ -57,6 +68,7 @@ def generate_docs_templates(context: dict[str, Any]) -> None:
                 "linkedin_usercode": context.get("linkedin_usercode"),
                 "twitter_username": context.get("twitter_username"),
                 "buymeacoffee_username": context.get("buymeacoffee_username"),
+                "repo_url": context.get("repo_url"),
             },
         },
         "sphinx": {

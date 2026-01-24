@@ -7,6 +7,10 @@
 ### ⚙️  Miscellaneous
 
 - *(version)* Version bump to 0.1.12!
+
+### 🐛 Fixed
+
+- *(docs)* Pass cookiecutter.project_slug between main generation project and documentation templates.
 ## [0.1.11] - 2026-01-06
 
 ### ⚙️  Miscellaneous
