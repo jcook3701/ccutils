@@ -2,7 +2,7 @@
 # Changelog:
 # --------------------------------------------------
 
-## [unreleased]
+## [0.1.13] - 2026-01-26
 
 ### ⚙️  Miscellaneous
 
@@ -16,7 +16,7 @@
 - Merge pull request #30 from jcook3701/develop
 
 Feat 011 (#29)
-- *(changelog)* Change log update.
+- *(changelog)* Changelog update.
 ## [0.1.12] - 2026-01-24
 
 ### ⚙️  Miscellaneous
