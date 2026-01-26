@@ -48,11 +48,11 @@ Path to SSH private key, if using SSH authentication.
 * **Type:**
   Path | None
 
-#### auth_type *: `Literal`[`'token'`, `'ssh'`]*
+#### auth_type *: Literal['token', 'ssh']*
 
-#### token *: `str` | `None`*
+#### token *: str | None*
 
-#### ssh_key_path *: `Path` | `None`*
+#### ssh_key_path *: Path | None*
 
 ### *class* nutrimatic.models.github.GitHubAccount(\*\*data)
 
@@ -76,13 +76,13 @@ GitHub users/org personal info
 
 (GitHubAuth) Authentication configuration for GitHub access.
 
-#### user *: `str`*
+#### user *: str*
 
-#### namespace *: `str`*
+#### namespace *: str*
 
-#### email *: `str`*
+#### email *: str*
 
-#### auth *: [`GitHubAuth`](#nutrimatic.models.github.GitHubAuth)*
+#### auth *: [GitHubAuth](#nutrimatic.models.github.GitHubAuth)*
 
 ### *class* nutrimatic.models.github.GitHubRepo(\*\*data)
 
@@ -130,22 +130,22 @@ GitHub repository description.
 
 (bool).
 
-#### owner *: `str`*
+#### owner *: str*
 
-#### namespace *: `str`*
+#### namespace *: str*
 
-#### name *: `str`*
+#### name *: str*
 
-#### full_name *: `str`*
+#### full_name *: str*
 
-#### description *: `str`*
+#### description *: str*
 
-#### url *: `str`*
+#### url *: str*
 
-#### html_url *: `str`*
+#### html_url *: str*
 
-#### ssh_url *: `str`*
+#### ssh_url *: str*
 
-#### clone_url *: `str`*
+#### clone_url *: str*
 
-#### is_template *: `bool`*
+#### is_template *: bool*

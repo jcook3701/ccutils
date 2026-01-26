@@ -53,10 +53,10 @@ BuyMeACoffee username.
 * **Type:**
   str
 
-#### github_username *: `str`*
+#### github_username *: str*
 
-#### twitter_username *: `str`*
+#### twitter_username *: str*
 
-#### linkedin_usercode *: `str`*
+#### linkedin_usercode *: str*
 
-#### buymeacoffee_username *: `str`*
+#### buymeacoffee_username *: str*

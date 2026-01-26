@@ -47,13 +47,13 @@ BuyMeACoffee username.
 * **Type:**
   str
 
-#### github_username *: `str`*
+#### github_username *: str*
 
-#### twitter_username *: `str`*
+#### twitter_username *: str*
 
-#### linkedin_usercode *: `str`*
+#### linkedin_usercode *: str*
 
-#### buymeacoffee_username *: `str`*
+#### buymeacoffee_username *: str*
 
 ### *class* nutrimatic.models.CCMeta(\*\*data)
 
@@ -62,19 +62,19 @@ Bases: `BaseModel`
 Root model for teabag.toml.
 Adjust fields as needed to match your teabag.toml structure.
 
+#### template *: [CCTemplate](nutrimatic.models.cctemplate.md#nutrimatic.models.cctemplate.CCTemplate)*
+
+#### tags *: list[str]*
+
+#### features *: list[str]*
+
+#### extra *: dict[str, object]*
+
 #### *class* Config
 
 Bases: `object`
 
 #### extra *= 'allow'*
-
-#### template *: [`CCTemplate`](nutrimatic.models.cctemplate.md#nutrimatic.models.cctemplate.CCTemplate)*
-
-#### tags *: `list`[`str`]*
-
-#### features *: `list`[`str`]*
-
-#### extra *: `dict`[`str`, `object`]*
 
 ### *class* nutrimatic.models.CCTemplate(\*\*data)
 
@@ -82,33 +82,33 @@ Bases: `BaseModel`
 
 A single template defined in ccmeta.toml.
 
+#### name *: str*
+
+#### description *: str | None*
+
+#### path *: Path*
+
+#### language *: str | None*
+
+#### license *: str | None*
+
+#### version *: str | None*
+
+#### maintainer *: str | None*
+
+#### project_type *: str | None*
+
+#### variables *: list[[CCTemplateVariable](nutrimatic.models.cctemplate.md#nutrimatic.models.cctemplate.CCTemplateVariable)]*
+
+#### tags *: list[str]*
+
+#### features *: list[str]*
+
 #### *class* Config
 
 Bases: `object`
 
 #### extra *= 'allow'*
-
-#### name *: `str`*
-
-#### description *: `str` | `None`*
-
-#### path *: `Path`*
-
-#### language *: `str` | `None`*
-
-#### license *: `str` | `None`*
-
-#### version *: `str` | `None`*
-
-#### maintainer *: `str` | `None`*
-
-#### project_type *: `str` | `None`*
-
-#### variables *: `list`[[`CCTemplateVariable`](nutrimatic.models.cctemplate.md#nutrimatic.models.cctemplate.CCTemplateVariable)]*
-
-#### tags *: `list`[`str`]*
-
-#### features *: `list`[`str`]*
 
 ### *class* nutrimatic.models.CCTemplateVariable(\*\*data)
 
@@ -116,11 +116,11 @@ Bases: `BaseModel`
 
 Represents a single cookiecutter input variable.
 
-#### name *: `str`*
+#### name *: str*
 
-#### default *: `str` | `None`*
+#### default *: str | None*
 
-#### description *: `str` | `None`*
+#### description *: str | None*
 
 ### *class* nutrimatic.models.CLIConfig(\*\*data)
 
@@ -156,21 +156,21 @@ Represents user CLI configuration nutri-matic.
 
 (bool) Enable/Disable verbose mode.
 
+#### github *: [GitHubAccount](nutrimatic.models.github.md#nutrimatic.models.github.GitHubAccount) | None*
+
+#### ga_tracking *: str | None*
+
+#### accounts *: [Accounts](nutrimatic.models.accounts.md#nutrimatic.models.accounts.Accounts) | None*
+
+#### default_template_branch *: str*
+
+#### cache_dir *: Path*
+
+#### log_file *: Path*
+
+#### verbose *: bool*
+
 #### *property* log_dir *: Path*
-
-#### github *: [`GitHubAccount`](nutrimatic.models.github.md#nutrimatic.models.github.GitHubAccount) | `None`*
-
-#### ga_tracking *: `str` | `None`*
-
-#### accounts *: [`Accounts`](nutrimatic.models.accounts.md#nutrimatic.models.accounts.Accounts) | `None`*
-
-#### default_template_branch *: `str`*
-
-#### cache_dir *: `Path`*
-
-#### log_file *: `Path`*
-
-#### verbose *: `bool`*
 
 ### *class* nutrimatic.models.ConfigData(\*\*data)
 
@@ -198,15 +198,15 @@ Cookiecutter project description.
 
 Cookiecutter project variables.
 
-#### project_name *: `str`*
+#### project_name *: str*
 
-#### author *: `str`*
+#### author *: str*
 
-#### version *: `str`*
+#### version *: str*
 
-#### description *: `str`*
+#### description *: str*
 
-#### variables *: `dict`[`str`, `Any`]*
+#### variables *: dict[str, Any]*
 
 ### *class* nutrimatic.models.GitHubAccount(\*\*data)
 
@@ -230,13 +230,13 @@ GitHub users/org personal info
 
 (GitHubAuth) Authentication configuration for GitHub access.
 
-#### user *: `str`*
+#### user *: str*
 
-#### namespace *: `str`*
+#### namespace *: str*
 
-#### email *: `str`*
+#### email *: str*
 
-#### auth *: [`GitHubAuth`](nutrimatic.models.github.md#nutrimatic.models.github.GitHubAuth)*
+#### auth *: [GitHubAuth](nutrimatic.models.github.md#nutrimatic.models.github.GitHubAuth)*
 
 ### *class* nutrimatic.models.GitHubAuth(\*\*data)
 
@@ -265,11 +265,11 @@ Path to SSH private key, if using SSH authentication.
 * **Type:**
   Path | None
 
-#### auth_type *: `Literal`[`'token'`, `'ssh'`]*
+#### auth_type *: Literal['token', 'ssh']*
 
-#### token *: `str` | `None`*
+#### token *: str | None*
 
-#### ssh_key_path *: `Path` | `None`*
+#### ssh_key_path *: Path | None*
 
 ### *class* nutrimatic.models.GitHubRepo(\*\*data)
 
@@ -317,25 +317,25 @@ GitHub repository description.
 
 (bool).
 
-#### owner *: `str`*
+#### owner *: str*
 
-#### namespace *: `str`*
+#### namespace *: str*
 
-#### name *: `str`*
+#### name *: str*
 
-#### full_name *: `str`*
+#### full_name *: str*
 
-#### description *: `str`*
+#### description *: str*
 
-#### url *: `str`*
+#### url *: str*
 
-#### html_url *: `str`*
+#### html_url *: str*
 
-#### ssh_url *: `str`*
+#### ssh_url *: str*
 
-#### clone_url *: `str`*
+#### clone_url *: str*
 
-#### is_template *: `bool`*
+#### is_template *: bool*
 
 ### *class* nutrimatic.models.Metadata(\*\*data)
 
@@ -359,6 +359,12 @@ metadata type.
 
 (str).
 
+#### version *: str*
+
+#### author *: str*
+
+#### license *: str*
+
 #### *property* copyright *: str*
 
 #### *classmethod* from_package(package_name='nutri-matic')
@@ -370,12 +376,6 @@ Falls back to defaults if the package is not found.
 * **Return type:**
   [`Metadata`](nutrimatic.models.metadata.md#nutrimatic.models.metadata.Metadata)
 
-#### version *: `str`*
-
-#### author *: `str`*
-
-#### license *: `str`*
-
 ### *class* nutrimatic.models.Namespace(\*\*data)
 
 Bases: `BaseModel`
@@ -386,9 +386,9 @@ A GitHub user/org containing templates
 
 (list[TemplateRepo]) List of GitHub namespace/organization template repositories.
 
-#### templates *: `list`[[`TemplateRepo`](nutrimatic.models.template.md#nutrimatic.models.template.TemplateRepo)]*
+#### templates *: list[[TemplateRepo](nutrimatic.models.template.md#nutrimatic.models.template.TemplateRepo)]*
 
-#### created_at *: `datetime`*
+#### created_at *: datetime*
 
 ### *class* nutrimatic.models.TemplateRepo(\*\*data)
 
@@ -404,9 +404,9 @@ A cookiecutter template repo
 
 (ConfigData) Metadata from a cookiecutter template.
 
-#### repo *: [`GitHubRepo`](nutrimatic.models.github.md#nutrimatic.models.github.GitHubRepo)*
+#### repo *: [GitHubRepo](nutrimatic.models.github.md#nutrimatic.models.github.GitHubRepo)*
 
-#### config *: [`ConfigData`](nutrimatic.models.template.md#nutrimatic.models.template.ConfigData) | `None`*
+#### config *: [ConfigData](nutrimatic.models.template.md#nutrimatic.models.template.ConfigData) | None*
 
 ### Modules
 

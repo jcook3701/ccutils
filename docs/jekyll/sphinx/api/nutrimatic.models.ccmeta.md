@@ -25,13 +25,13 @@ Bases: `BaseModel`
 Root model for teabag.toml.
 Adjust fields as needed to match your teabag.toml structure.
 
-#### template *: [`CCTemplate`](nutrimatic.models.cctemplate.md#nutrimatic.models.cctemplate.CCTemplate)*
+#### template *: [CCTemplate](nutrimatic.models.cctemplate.md#nutrimatic.models.cctemplate.CCTemplate)*
 
-#### tags *: `list`[`str`]*
+#### tags *: list[str]*
 
-#### features *: `list`[`str`]*
+#### features *: list[str]*
 
-#### extra *: `dict`[`str`, `object`]*
+#### extra *: dict[str, object]*
 
 #### *class* Config
 

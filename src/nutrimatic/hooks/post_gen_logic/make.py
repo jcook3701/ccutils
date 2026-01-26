@@ -22,7 +22,7 @@ def get_make_cmds(context: dict[str, Any]) -> list[str]:
     make_cfg = context.get("_hooks", {}).get("post_gen_make_cmds", {})
 
     all_make_cmds = [
-        "install",
+        "python-install",
         "git-init",
         "pre-commit-init",
         "changelog",

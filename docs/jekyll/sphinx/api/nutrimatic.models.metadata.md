@@ -38,11 +38,11 @@ metadata type.
 
 (str).
 
-#### version *: `str`*
+#### version *: str*
 
-#### author *: `str`*
+#### author *: str*
 
-#### license *: `str`*
+#### license *: str*
 
 #### *property* copyright *: str*
 
