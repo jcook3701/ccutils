@@ -54,18 +54,18 @@ Represents user CLI configuration nutri-matic.
 
 (bool) Enable/Disable verbose mode.
 
-#### github *: [`GitHubAccount`](nutrimatic.models.github.md#nutrimatic.models.github.GitHubAccount) | `None`*
+#### github *: [GitHubAccount](nutrimatic.models.github.md#nutrimatic.models.github.GitHubAccount) | None*
 
-#### ga_tracking *: `str` | `None`*
+#### ga_tracking *: str | None*
 
-#### accounts *: [`Accounts`](nutrimatic.models.accounts.md#nutrimatic.models.accounts.Accounts) | `None`*
+#### accounts *: [Accounts](nutrimatic.models.accounts.md#nutrimatic.models.accounts.Accounts) | None*
 
-#### default_template_branch *: `str`*
+#### default_template_branch *: str*
 
-#### cache_dir *: `Path`*
+#### cache_dir *: Path*
 
-#### log_file *: `Path`*
+#### log_file *: Path*
 
-#### verbose *: `bool`*
+#### verbose *: bool*
 
 #### *property* log_dir *: Path*

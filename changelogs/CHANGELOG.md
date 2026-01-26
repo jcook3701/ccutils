@@ -2,21 +2,7 @@
 # Changelog:
 # --------------------------------------------------
 
-## [unreleased]
-
-### ⚙️  Miscellaneous
-
-- *(version)* Version bump to 0.1.12!
-
-### 🐛 Fixed
-
-- *(docs)* Pass cookiecutter.project_slug between main generation project and documentation templates.
-- *(docs)* Update transfer of data to sub-templates.
-
-### 🚀 Added
-
-- *(upgrade)* Getting started on setup to begin upgrade from python3-cookiecutter template.
-## [0.1.11] - 2026-01-06
+## [0.1.12] - 2026-01-24
 
 ### ⚙️  Miscellaneous
 
@@ -28,7 +14,22 @@ Feat 009
 - Merge pull request #22 from jcook3701/develop
 
 Develop
-- *(changelogs)* Changelog update.
+- Feat 010 (#27)
+
+* chore(changelogs): Changelog update.
+
+* chore(version): Version bump to 0.1.12!
+
+* fix(docs): Pass cookiecutter.project_slug between main generation project and documentation templates.
+
+* fix(docs): Update transfer of data to sub-templates.
+
+* feat(upgrade): Getting started on setup to begin upgrade from python3-cookiecutter template.
+
+* fix(format): format fix.
+- Merge pull request #28 from jcook3701/develop
+
+Feat 010 (#27)
 
 ### 🐛 Fixed
 
