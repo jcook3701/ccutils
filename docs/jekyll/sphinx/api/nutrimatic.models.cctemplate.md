@@ -23,11 +23,11 @@ Bases: `BaseModel`
 
 Represents a single cookiecutter input variable.
 
-#### name *: `str`*
+#### name *: str*
 
-#### default *: `str` | `None`*
+#### default *: str | None*
 
-#### description *: `str` | `None`*
+#### description *: str | None*
 
 ### *class* nutrimatic.models.cctemplate.CCTemplate(\*\*data)
 
@@ -35,27 +35,27 @@ Bases: `BaseModel`
 
 A single template defined in ccmeta.toml.
 
-#### name *: `str`*
+#### name *: str*
 
-#### description *: `str` | `None`*
+#### description *: str | None*
 
-#### path *: `Path`*
+#### path *: Path*
 
-#### language *: `str` | `None`*
+#### language *: str | None*
 
-#### license *: `str` | `None`*
+#### license *: str | None*
 
-#### version *: `str` | `None`*
+#### version *: str | None*
 
-#### maintainer *: `str` | `None`*
+#### maintainer *: str | None*
 
-#### project_type *: `str` | `None`*
+#### project_type *: str | None*
 
-#### variables *: `list`[[`CCTemplateVariable`](#nutrimatic.models.cctemplate.CCTemplateVariable)]*
+#### variables *: list[[CCTemplateVariable](#nutrimatic.models.cctemplate.CCTemplateVariable)]*
 
-#### tags *: `list`[`str`]*
+#### tags *: list[str]*
 
-#### features *: `list`[`str`]*
+#### features *: list[str]*
 
 #### *class* Config
 

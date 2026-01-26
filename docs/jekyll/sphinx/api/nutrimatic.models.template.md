@@ -47,15 +47,15 @@ Cookiecutter project description.
 
 Cookiecutter project variables.
 
-#### project_name *: `str`*
+#### project_name *: str*
 
-#### author *: `str`*
+#### author *: str*
 
-#### version *: `str`*
+#### version *: str*
 
-#### description *: `str`*
+#### description *: str*
 
-#### variables *: `dict`[`str`, `Any`]*
+#### variables *: dict[str, Any]*
 
 ### *class* nutrimatic.models.template.TemplateRepo(\*\*data)
 
@@ -71,9 +71,9 @@ A cookiecutter template repo
 
 (ConfigData) Metadata from a cookiecutter template.
 
-#### repo *: [`GitHubRepo`](nutrimatic.models.github.md#nutrimatic.models.github.GitHubRepo)*
+#### repo *: [GitHubRepo](nutrimatic.models.github.md#nutrimatic.models.github.GitHubRepo)*
 
-#### config *: [`ConfigData`](#nutrimatic.models.template.ConfigData) | `None`*
+#### config *: [ConfigData](#nutrimatic.models.template.ConfigData) | None*
 
 ### *class* nutrimatic.models.template.Namespace(\*\*data)
 
@@ -85,6 +85,6 @@ A GitHub user/org containing templates
 
 (list[TemplateRepo]) List of GitHub namespace/organization template repositories.
 
-#### templates *: `list`[[`TemplateRepo`](#nutrimatic.models.template.TemplateRepo)]*
+#### templates *: list[[TemplateRepo](#nutrimatic.models.template.TemplateRepo)]*
 
-#### created_at *: `datetime`*
+#### created_at *: datetime*
