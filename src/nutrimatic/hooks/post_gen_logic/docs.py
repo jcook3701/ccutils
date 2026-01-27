@@ -65,6 +65,7 @@ def generate_docs_templates(context: dict[str, Any]) -> None:
                 "theme": context.get("theme"),
                 "ga_tracking": context.get("ga_tracking"),
                 "github_username": context.get("github_username"),
+                "github_io": context.get("github_io"),
                 "linkedin_usercode": context.get("linkedin_usercode"),
                 "twitter_username": context.get("twitter_username"),
                 "buymeacoffee_username": context.get("buymeacoffee_username"),
