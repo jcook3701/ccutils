@@ -2,12 +2,7 @@
 # Changelog:
 # --------------------------------------------------
 
-## [unreleased]
-
-### ⚙️  Miscellaneous
-
-- *(version)* Bump version to 0.1.14!
-## [0.1.13] - 2026-01-26
+## [0.1.14] - 2026-01-27
 
 ### ⚙️  Miscellaneous
 
@@ -21,7 +16,16 @@
 - Merge pull request #30 from jcook3701/develop
 
 Feat 011 (#29)
-- *(changelog)* Changelog update.
+- Feat 012 (#31)
+
+* chore(changelog): Changelog update.
+
+* chore(version): Bump version to 0.1.14!
+
+* feat(docs): Pass github io to docs template from main template.
+- Merge pull request #32 from jcook3701/develop
+
+Feat 012 (#31)
 ## [0.1.12] - 2026-01-24
 
 ### ⚙️  Miscellaneous
