@@ -2,6 +2,11 @@
 # Changelog:
 # --------------------------------------------------
 
+## [unreleased]
+
+### ⚙️  Miscellaneous
+
+- *(changelog)* Changelog update.
 ## [0.1.14] - 2026-01-27
 
 ### ⚙️  Miscellaneous

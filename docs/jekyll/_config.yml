@@ -3,7 +3,7 @@
 
 title: "Nutri-Matic"
 author: "Jared Cook"
-version: "0.1.14"
+version: "0.1.15"
 description: "Cookiecutter utilities for streamlining development and utilization of Cookiecutter templates."
 remote_theme: "pmarsceill/just-the-docs"
 ga_tracking: "G-C7PWLWSHB9"
