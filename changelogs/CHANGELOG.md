@@ -6,8 +6,22 @@
 
 ### ⚙️  Miscellaneous
 
+- *(version)* Bump version to 0.1.14!
+## [0.1.13] - 2026-01-26
+
+### ⚙️  Miscellaneous
+
+- Feat 011 (#29)
+
+* chore(changelog): Changelog update.
+
+* chore(version): Version bump to 0.1.13!
+
+* fix(make): Updated project to work with update makefile command name python-install that was moved from the name install.
+- Merge pull request #30 from jcook3701/develop
+
+Feat 011 (#29)
 - *(changelog)* Changelog update.
-- *(version)* Version bump to 0.1.13!
 ## [0.1.12] - 2026-01-24
 
 ### ⚙️  Miscellaneous
