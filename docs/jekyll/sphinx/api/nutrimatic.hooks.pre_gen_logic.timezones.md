@@ -6,7 +6,3 @@ parent: api
 ---
 nutrimatic.hooks.pre_gen_logic.timezones
 ==========================================
-
-<a id="module-nutrimatic.hooks.pre_gen_logic.timezones"></a>
-
-nutri-matic Package

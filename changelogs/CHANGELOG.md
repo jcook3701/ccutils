@@ -8,6 +8,10 @@
 
 - *(changelog)* Changelog update.
 - *(version)* Update version to 0.1.15!
+
+### 🚀 Added
+
+- *(jinja)* Added jinja2-time to project to allow this project to be used to pull my cookiecutter templates.
 ## [0.1.14] - 2026-01-27
 
 ### ⚙️  Miscellaneous
