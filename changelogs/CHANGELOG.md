@@ -7,6 +7,7 @@
 ### ⚙️  Miscellaneous
 
 - *(changelog)* Changelog update.
+- *(version)* Update version to 0.1.15!
 ## [0.1.14] - 2026-01-27
 
 ### ⚙️  Miscellaneous
